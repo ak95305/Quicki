@@ -1,0 +1,186 @@
+nav {
+  a {
+    color: #000;
+    font-weight: 700;
+    font-size: 1.3em;
+  }
+
+  .cta {
+    background-image: linear-gradient(45deg, #fb7d0d -10%, #da1b60 110%);
+    padding: 0.1rem 1rem;
+    color: #fff;
+    border-radius: 11px;
+    letter-spacing: 0.2rem;
+  }
+}
+
+.hamburger-box {
+  align-items: center;
+  .hamburger {
+    width: fit-content;
+    margin-left: auto;
+    position: relative;
+    z-index: 998;
+    .bar {
+      width: 2rem;
+      height: 0.4rem;
+      background-color: #000;
+      transform-origin: 9px 3px;
+      transition: 500ms linear;
+    }
+
+    .bar2 {
+      margin-top: 0.25rem;
+    }
+  }
+}
+
+.hamburger-menu {
+  background-color: #fff;
+  width: 80%;
+  margin-top: 6rem;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 3px 3px 10px rgb(56, 56, 56), -3px -3px 10px rgb(56, 56, 56);
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: hidden;
+  opacity: 0;
+  animation: fade-out 500ms linear forwards;
+}
+
+.hamburger-menu-ani{
+    animation: fade-in 500ms linear forwards;
+}
+
+@keyframes fade-in {
+    from{
+        opacity: 0;
+        visibility: hidden;
+    }
+    1%{
+        visibility: visible;
+    }
+    to{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes fade-out {
+    from{
+        opacity: 1;
+        visibility: visible;
+    }
+    1%{
+        visibility: hidden;
+    }
+    to{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.bgblur{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: 99;
+    display: none;
+    transition: 500ms linear;
+}
+
+.bar1-ani {
+  transform: rotate(45deg);
+}
+
+.bar2-ani {
+  transform: rotate(-45deg);
+}
+
+main {
+  background-image: url("./assets/pexels-josh-hild-2801312.jpg");
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  #form-location {
+    .row {
+      height: fit-content;
+
+      @media only screen and (min-width: 768px) {
+        height: 82vh;
+      }
+    }
+    form {
+      background-image: linear-gradient(45deg, #fb7d0d -10%, #da1b60 110%);
+      border-radius: 1rem;
+      height: 21rem;
+      width: 18rem;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+
+      label {
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+
+      input {
+        width: 80%;
+        border-radius: 50px;
+        outline: none;
+        border: none;
+        align-self: center;
+        margin-bottom: 1rem;
+        padding: 0rem 1rem;
+        font-size: 1rem;
+      }
+
+      input[placeholder="Enter City..."] {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      button {
+        width: fit-content;
+        padding: 0.2rem 1rem;
+        background-color: #fff;
+        border: none;
+        color: linear-gradient(45deg, #fb7d0d -10%, #da1b60 110%);
+        align-self: center;
+        border-radius: 0.5rem;
+      }
+
+      select {
+        width: fit-content;
+        border-radius: 0.5rem;
+        border: none;
+
+        #later {
+          &:hover {
+            .calender {
+              background-color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.intro-text {
+  color: #fff;
+  margin-bottom: 4rem;
+  p {
+    color: rgba(255, 255, 255, 0.781);
+    font-size: 1.5rem;
+  }
+}

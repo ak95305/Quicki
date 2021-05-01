@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="icon" href="./assets/quicki-icon.png" type="image/gif" sizes="32x16">
+    <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap" rel="stylesheet">  
+  <title>Quicki</title>
+
+  <style>
+      body{
+        font-family: 'Jaldi', sans-serif;
+        font-size: 100%;
+      }
+  </style>
+</head>
+<body>
+
+    <div class="bgblur"></div>
+    <div id="main">
+        <header class="container py-3">
+            <div class="row">
+                <div class="col-5">
+                    <img src="./assets/quiki-logo.png" alt="">
+                </div>
+                <nav class="col-7 d-md-block d-none text-right align-self-center">
+                    <a href="#" class="mx-3">Home</a>
+                    <a href="#" class="mx-3">Drive</a>
+                    <a href="#" class="mx-3">Help</a>
+                    <a href="#" class="ml-4 cta">RIDE</a>
+                </nav>
+                <div class="col d-md-none d-flex hamburger-box">
+                    <div class="hamburger">
+                        <div class="bar bar1"></div>
+                        <div class="bar bar2"></div>
+                    </div>
+                </div>
+                <nav class="position-absolute hamburger-menu">
+                    <a href="#" class="m-3">Home</a>
+                    <a href="#" class="m-3">Drive</a>
+                    <a href="#" class="m-3">Help</a>
+                    <a href="#" class="m-4 cta">RIDE</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div id="form-location" class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md align-self-center w-auto mt-4">                  
+                        <form>
+                        <input type="text" placeholder="Enter City...">
+    
+                        <label for="location">From<input type="text" id="location" placeholder="Enter Location..."></label>
+                        
+    
+                        <label for="destination">To<input type="text" id="destination" placeholder="Enter Destination..."></label>
+                        
+    
+                        <label for="time" class="d-flex flex-column">
+                            Time
+                            <select value="time">
+                                <option name="now" id="now">Now</option>
+                                <option name="later" id="later">Later<input type="date" class="calender d-none"></input></option>
+                            </select>
+                        </label>
+                        
+    
+                        <button>FIND</button>
+                        </form>
+                    </div>
+                    <div class="col-md intro-text align-self-end w-auto mt-4">
+                        <h1>Reach Your Destination</h1>
+                        <p>Choose according to your needs</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
